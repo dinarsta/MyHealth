@@ -36,11 +36,11 @@
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
-                  <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
+                  <a href="{{Route('user')}}"><img class="img-xs rounded-circle " src="{{ Auth::user()->foto }}" alt=""></a>
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
-                  <h5 class="mb-0 font-weight-normal">{{ Auth::user()->name }}</h5>
+                  <a href="{{Route('user')}}"><h5 class="mb-0 font-weight-normal" style="text-decoration: none; color: #fff;">{{ Auth::user()->name }}</h5></a>
                 </div>
               </div>
             </div>
@@ -49,7 +49,7 @@
           <li class="nav-item menu-items">
             <a class="nav-link" href="{{route('home')}}">
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i>
+                <i class="mdi mdi-account"></i>
               </span>
               <span class="menu-title">Dashboard</span>
             </a>
@@ -57,7 +57,7 @@
           <li class="nav-item menu-items">
             <a class="nav-link" href="{{route('catper')}}">
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i>
+                <i class="mdi mdi-airplane"></i>
               </span>
               <span class="menu-title">Catatan Perjalan</span>
             </a>

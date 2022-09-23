@@ -19,4 +19,12 @@ class CatatanPerjalananController extends Controller
             'catatanPerjalanans' => $catatanPerjalanans
         ]);
     }
+
+    public function getUserInfo()
+    {
+        $userInfo = $this->catatanPerjalanan->all();
+        return view('user.datauser', [
+            'userInfo' => $userInfo
+        ]);
+    }
 }

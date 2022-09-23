@@ -25,5 +25,6 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home')->middleware("auth");
 Route::get('/catper', [CatatanPerjalananController::class, 'index'])->name('catper')->middleware("auth");
 Route::get('/user', [CatatanPerjalananController::class, 'getUserInfo'])->name('user')->middleware("auth");
+Route::get('/edit', [CatatanPerjalananController::class, 'getUserEdit'])->name('edit')->middleware('auth');
 
 

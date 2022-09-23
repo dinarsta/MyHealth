@@ -11,9 +11,15 @@
 
               <div class="col-md-4 gradient-custom text-center text-white"
                 style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-                <img src="{{ Auth::user()->foto }}"alt="INI POTO PROFIL!!!!!" class="img-fluid my-5" style="width: 80px;" />
+                @if (auth()->user()->foto == '')
+                <img src="https://pbs.twimg.com/media/Eo6vnl5U0AATo4J?format=jpg&name=small" alt="INI PHOTO PRIFLE" class="img-fluid my-4 rounded-circle" style="width: 80px;" />
+                @else
+                <img src="{{ Auth::user()->foto }}"alt="INI POTO PROFIL!!!!!" class="img-fluid my-4" style="width: 80px;" />
+                @endif
                 <h5>{{ Auth::user()->name }}</h5>
-                <i class="fa fa-edit mb-5"></i>
+                <a href="{{route('edit')}}">
+                  <i class="mdi mdi-grease-pencil"></i>
+                </a>
               </div>
 
               <div class="col-md-8">

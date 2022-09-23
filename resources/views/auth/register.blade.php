@@ -61,6 +61,24 @@
                             </div>
                         </div>
 
+                        <div class="row mb-3">
+                            <label for="no_telpon" class="col-md-4 col-form-label text-md-end">{{ __('No Telepon') }}</label>
+                            
+                            <div class="col-md-6">
+                                <input id="no_telpon" type="text" class="form-control" name="no_telpon" required autocomplete="Nomor Telepon">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="NIK" class="col-md-4 col-form-label text-md-end">{{ __('NIK') }}</label>
+                            
+                            <div class="col-md-6">
+                                <input id="NIK" type="text" class="form-control" name="NIK" required autocomplete="NIK SESUAI KTP">
+                            </div>
+                            <p class="text-muted col-md-10 text-md-end ">NIK SESUAI KTP YA!!!!!</p>
+                        </div>
+
+
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

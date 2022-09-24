@@ -8,12 +8,9 @@
         <form class="forms-sample">
           <div class="form-group">
             <label for="exampleInputName1">Name</label>
-            <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+            <input type="text" style="background-color:white;" class="form-control" id="exampleInputName1" placeholder="Name">
           </div>
-          <div class="form-group">
-            <label for="exampleInputName1">Name</label>
-            <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
-          </div>
+          
           <div class="form-group">
               <label for="exampleInputEmail3">Email address</label>
               <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
@@ -34,11 +31,11 @@
             </div>
             <div class="form-group">
               <label for="exampleInputName1">No telepon</label>
-              <input type="text" class="form-control" id="exampleInputName1" placeholder="Nomor telepon">
+              <input type="text" style="background-color: white" class="form-control" id="exampleInputName1" placeholder="Nomor telepon">
             </div>
             <div class="form-group">
                 <label for="exampleInputCity1">NIK</label>
-                <input type="text" class="form-control" id="exampleInputCity1" placeholder="NIK SESUAI KTPEH">
+                <input type="text" style="background-color: white" class="form-control" id="exampleInputCity1" placeholder="NIK SESUAI KTPEH">
             </div>
             <button type="submit" class="btn btn-primary mr-2">Submit</button>
           <button class="btn btn-dark">Cancel</button>

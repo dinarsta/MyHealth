@@ -27,4 +27,9 @@ class CatatanPerjalananController extends Controller
             'userInfo' => $userInfo
         ]);
     }
+
+    public function getUserEdit()
+    {
+        return view('user.editdatauser');
+    }
 }

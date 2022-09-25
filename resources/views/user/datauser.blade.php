@@ -5,7 +5,7 @@
 
     <div class="container py-3 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col col-lg-10 mb-6 mb-lg-4">
+        <div class="col col-lg-12 mb-5 mb-lg-10">
           <div class="card" style="border-radius: .5rem;">
             <div class="row g-0">
 
@@ -14,11 +14,11 @@
                 @if (auth()->user()->foto == '')
                 <img src="https://pbs.twimg.com/media/Eo6vnl5U0AATo4J?format=jpg&name=small" alt="INI PHOTO PRIFLE" class="img-fluid my-4 rounded-circle" style="width: 80px;" />
                 @else
-                <img src="{{ Auth::user()->foto }}"alt="INI POTO PROFIL!!!!!" class="img-fluid my-4" style="width: 80px;" />
+                <img src="foto/{{ Auth::user()->foto }}"alt="INI POTO PROFIL!!!!!" class="img-fluid my-4 rounded-circle" style="width: 80px; height:80px" />
                 @endif
                 <h5>{{ Auth::user()->name }}</h5>
-                <a href="{{route('edit')}}">
-                  <i class="mdi mdi-grease-pencil"></i>
+                <a href="{{route('user.edit')}}">
+                  <i class="mdi mdi-grease-pencil" style="color: white"></i>
                 </a>
               </div>
 

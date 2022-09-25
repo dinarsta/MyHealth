@@ -3,44 +3,66 @@
 @section('content')
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Edit profile</h4>
-        <form class="forms-sample">
-          <div class="form-group">
-            <label for="exampleInputName1">Name</label>
-            <input type="text" style="background-color:white;" class="form-control" id="exampleInputName1" placeholder="Name">
-          </div>
-          
-          <div class="form-group">
-              <label for="exampleInputEmail3">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword4">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <label>File upload</label>
-                <input type="file" name="img[]" class="file-upload-default">
-                <div class="input-group col-xs-12">
-                    <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
-                    <span class="input-group-append">
-                        <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                    </span>
+        <div class="card-body">
+            <h4 class="card-title">Edit profile</h4>
+            <form method="POST" action="{{route('user.update', Auth::user()->id)}}" enctype="multipart/form-data">
+              @csrf
+              @method('put')
+                <div class="row">
+                    <div class="col-4">
+
+                        <div class="form-group">
+                            <label>File upload</label>
+                            <div class="input-group col-xs-12">
+                                <input type="file" name="foto" value="{{Auth::user()->foto}}" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputName1">Nama</label>
+                            <input value="{{Auth::user()->name}}" type="text" class="form-control" placeholder="Nama lengkap sesuai KTP">
+                        </div>
+
+                    </div>
+
+                    <div class="col-8">
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="form-group">
+                              <label for="exampleInputEmail3">Email address</label>
+                              <input value="{{Auth::user()->email}}" type="email" class="form-control">
+                          </div>
+                        </div>
+
+                        <div class="col-6">
+                          <div class="form-group">
+                              <label for="exampleInputPassword4">Password</label><br>
+                              <a href="{{route('password.request')}}" class="btn btn-primary">change password</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="form-group">
+                            <label for="exampleInputName1">No telepon</label>
+                            <input value="{{Auth::user()->no_telpon}}" type="text" class="form-control" placeholder="Nomor telepon">
+                        </div>
+                      </div>
+
+                      <div class="row">                      
+                        <div class="form-group">
+                            <label for="exampleInputCity1">NIK</label>
+                            <input value="{{Auth::user()->NIK}}" type="text" class="form-control" placeholder="NIK sesuai KTP">
+                        </div>
+                      </div>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-              <label for="exampleInputName1">No telepon</label>
-              <input type="text" style="background-color: white" class="form-control" id="exampleInputName1" placeholder="Nomor telepon">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputCity1">NIK</label>
-                <input type="text" style="background-color: white" class="form-control" id="exampleInputCity1" placeholder="NIK SESUAI KTPEH">
-            </div>
-            <button type="submit" class="btn btn-primary mr-2">Submit</button>
-          <button class="btn btn-dark">Cancel</button>
-        </form>
-      </div>
+
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <a href="{{route('user')}}" class="btn btn-dark">Cancel</a>
+
+            </form>
+        </div>
     </div>
-  </div>
+</div>
 @endsection

@@ -40,7 +40,7 @@
                   @if (auth()->user()->foto == '')
                   <a href="{{Route('user')}}"><img class="img-xs rounded-circle " src="https://pbs.twimg.com/media/Eo6vnl5U0AATo4J?format=jpg&name=small" alt=""></a>
                   @else
-                  <a href="{{Route('user')}}"><img class="img-xs rounded-circle " src="{{ Auth::user()->foto }}" alt=""></a>
+                  <a href="{{Route('user')}}"><img class="img-xs rounded-circle " src="foto/{{ Auth::user()->foto }}" alt=""></a>
                   @endif
                   <span class="count bg-success"></span>
                 </div>
@@ -113,7 +113,7 @@
           <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
               <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Myhealth 2022</span>
-              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Made with 💕</span>
+              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Made with 💕 by US</span>
             </div>
           </footer>
           <!-- footer end -->

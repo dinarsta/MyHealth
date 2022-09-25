@@ -31,12 +31,33 @@
             <div class="row">
               <div class="col-9">
                 <div class="d-flex align-items-center align-self-start">
-                  <h4>Catatan Perjalanan </h4>
+                  <h4>History Perjalanan</h4>
                 </div>
               </div>
               <div class="col-3">
                 <div class="icon icon-box-info">
                     <span class="mdi mdi-airplane"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="grid-margin stretch-card">
+      <div class="card">
+        <a href="{{route('catper.new')}}" style="text-decoration: none; color: #fff;">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-9">
+                <div class="d-flex align-items-center align-self-start">
+                  <h4>Mulai Perjalanan</h4>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="icon icon-box-warning">
+                    <span class="mdi mdi-grease-pencil"></span>
                 </div>
               </div>
             </div>

@@ -23,6 +23,17 @@ class CatatanPerjalananController extends Controller
         ]);
     }
 
+    public function getCatatanPerjalanan()
+    {
+        return view('user.tambahcatper');
+    }
+
+    public function postCatatanPerjalanan(Request $request)
+    {
+        $this->catatanPerjalanan->create($request->all());
+        return redirect()->route('catper');
+    }
+
     public function getUserInfo()
     {
         $userInfo = $this->catatanPerjalanan->all();
@@ -39,10 +50,6 @@ class CatatanPerjalananController extends Controller
         ]);
     }
 
-    public function postCatatanPerjalanan()
-    {
-        return view();
-    }
 
     public function postUpdateUser(Request $request, $id)
     {
@@ -61,4 +68,5 @@ class CatatanPerjalananController extends Controller
         $data->update($request->all());
         return redirect()->route('user');
     }
+
 }

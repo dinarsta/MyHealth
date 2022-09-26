@@ -64,7 +64,15 @@
               <span class="menu-icon">
                 <i class="mdi mdi-airplane"></i>
               </span>
-              <span class="menu-title">Catatan Perjalan</span>
+              <span class="menu-title">History Perjalanan</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{{route('catper.new')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-grease-pencil"></i>
+              </span>
+              <span class="menu-title">Mulai Perjalanan</span>
             </a>
           </li>
           <li class="nav-item menu-items">

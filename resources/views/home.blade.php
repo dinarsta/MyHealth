@@ -1,5 +1,4 @@
 @extends('layouts.layout')
-
 @section('content')
 <div class="row">
   <div class="col-xl-6 col-sm-6">

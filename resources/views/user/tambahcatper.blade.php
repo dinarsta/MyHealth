@@ -4,7 +4,7 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">Edit profile</h4>
+            <h4 class="card-title">TAMBAH PERJALANAN</h4>
             <form method="POST" action="{{route('catper.post')}}">
                 @csrf
 
@@ -15,7 +15,7 @@
                 <div class="row">
                   <div class="col-6">
                     <div class="form-group">
-                        <label>Tangal</label>
+                        <label>Tanggal</label>
                         <input type="date" class="form-control"  name="tanggal">
                     </div>
                   </div>

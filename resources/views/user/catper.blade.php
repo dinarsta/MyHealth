@@ -7,7 +7,7 @@
         <h4 class="card-title">catatan perjalanan</h4>
         </p>
         <div class="table-responsive">
-          <table class="table table-hover">
+          <table class="table table-hover-light">
             <thead>
               <tr>
                 <th>Nama</th>

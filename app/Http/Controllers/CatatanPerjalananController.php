@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CatatanPerjalanan;
 use App\Models\User;
-use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
+use App\Models\CatatanPerjalanan;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Http;
 
 class CatatanPerjalananController extends Controller
 {

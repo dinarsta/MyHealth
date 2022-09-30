@@ -66,7 +66,7 @@
                         <label for="no_telpon" class="col-md-4 col-form-label text-md-end">{{ __('No Telepon') }}</label>
                         
                         <div class="col-md-6">
-                            <input id="no_telpon" type="text" class="form-control" name="no_telpon" required autocomplete="Nomor Telepon">
+                            <input id="no_telpon" type="text" class="form-control" name="no_telpon" required autocomplete="no_telpon">
                         </div>
                     </div>
 
@@ -74,7 +74,14 @@
                         <label for="NIK" class="col-md-4 col-form-label text-md-end">{{ __('NIK') }}</label>
                         
                         <div class="col-md-6">
-                            <input id="NIK" type="text" class="form-control" name="NIK" required autocomplete="NIK SESUAI KTP">
+                            <input id="NIK" type="text" class="form-control" name="NIK" required autocomplete="NIK">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+
+                        <div class="col-md-6">
+                            <input type="hidden" type="file" class="form-control" name="foto" required autocomplete="foto" value="test.jpg">
                         </div>
                     </div>
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class HomeController extends Controller
 {
@@ -24,5 +25,14 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function getAPICovid()
+    {
+        $response = Http::get('https://data.covid19.go.id/public/api/update.json');
+        $jumlah = $response->json();
+        return view('home', [
+            'jumlah' => $jumlah
+        ]);
     }
 }

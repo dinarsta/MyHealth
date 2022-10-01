@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CatatanPerjalanan;
 use App\Models\User;
-use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
+use App\Models\CatatanPerjalanan;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Http;
 
 class CatatanPerjalananController extends Controller
 {
@@ -67,6 +68,14 @@ class CatatanPerjalananController extends Controller
         }
         $data->update($request->all());
         return redirect()->route('user');
+    }
+
+    public function getDataUser()
+    {
+        $dataUser = $this->user->get();
+        return view('admin.tableuser', [
+            'dataUser' => $dataUser
+        ]);
     }
 
 }

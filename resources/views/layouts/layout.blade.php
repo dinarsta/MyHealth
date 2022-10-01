@@ -37,7 +37,7 @@
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
-                  @if (auth()->user()->foto == '')
+                  @if (auth()->user()->foto == 'test.jpg')
                   <a href="{{Route('user')}}"><img class="img-xs rounded-circle " src="https://pbs.twimg.com/media/Eo6vnl5U0AATo4J?format=jpg&name=small" alt=""></a>
                   @else
                   <a href="{{Route('user')}}"><img class="img-xs rounded-circle " src="foto/{{ Auth::user()->foto }}" alt=""></a>
@@ -46,6 +46,9 @@
                 </div>
                 <div class="profile-name">
                   <a href="{{Route('user')}}"><h5 class="mb-0 font-weight-normal" style="text-decoration: none; color: #fff;">{{ Auth::user()->name }}</h5></a>
+                  @if(auth()->user()->role == 'admin')
+                    <h6 class="text-muted">Admin</h6>
+                  @endif
                 </div>
               </div>
             </div>
@@ -59,6 +62,18 @@
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
+
+          @if(auth()->user()->role == 'admin')
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{{route('tableuser')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-account"></i>
+              </span>
+              <span class="menu-title">Data User</span>
+            </a>
+          </li> 
+          @endif
+
           <li class="nav-item menu-items">
             <a class="nav-link" href="{{route('catper')}}">
               <span class="menu-icon">
@@ -76,15 +91,12 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <a class="nav-link" href="{{ route('logout') }}">
               <span class="menu-icon">
                 <i class="mdi mdi-speedometer"></i>
               </span>
               <span class="menu-title">
                 Logout
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                 @csrf
-                </form>
               </span>
             </a>
           </li>

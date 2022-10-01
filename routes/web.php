@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CatatanPerjalananController;
 use App\Models\CatatanPerjalanan;
+use Illuminate\Auth\Events\Login;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,14 +23,23 @@ use App\Models\CatatanPerjalanan;
 //     return view('welcome');
 // });
 
-Auth::routes();
-
-Route::get('/', [HomeController::class, 'index'])->name('home')->middleware("auth");
-Route::get('/catper', [CatatanPerjalananController::class, 'index'])->name('catper')->middleware("auth");
+Route::get('/', [HomeController::class, 'index'])->name('home')->middleware('auth');
+Route::get('/catper', [CatatanPerjalananController::class, 'index'])->name('catper')->middleware('auth');
 Route::get('/new', [CatatanPerjalananController::class, 'getCatatanPerjalanan'])->name('catper.new')->middleware('auth');
-Route::post('/post', [CatatanPerjalananController::class, 'postCatatanPerjalanan'])->name('catper.post')->middleware('auth');
-Route::get('/user', [CatatanPerjalananController::class, 'getUserInfo'])->name('user')->middleware("auth");
+Route::post('/post', [CatatanPerjalananController::class, 'postCatatanPerjalanan'])->name('catper.post');
+Route::get('/user', [CatatanPerjalananController::class, 'getUserInfo'])->name('user')->middleware('auth');
 Route::get('/edit', [CatatanPerjalananController::class, 'getUserEdit'])->name('user.edit')->middleware('auth');
-Route::put('/update/{id}', [CatatanPerjalananController::class, 'postUpdateUser'])->name('user.update')->middleware('auth');
+Route::put('/update/{id}', [CatatanPerjalananController::class, 'postUpdateUser'])->name('user.update');
+
+Route::group(['middleware' => ['auth', 'hakakses:admin']], function(){
+    Route::get('/tableuser', [CatatanPerjalananController::class, 'getDataUser'])->name('tableuser')->middleware('auth');
+});
+
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/loginuser', [LoginController::class, 'postLogin'])->name('loginuser');
+Route::get('/register', [LoginController::class, 'register'])->name('register');
+Route::post('/registeruser', [LoginController::class, 'postRegister'])->name('registeruser');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
 
 

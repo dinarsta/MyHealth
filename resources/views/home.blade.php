@@ -1,28 +1,9 @@
 @extends('layouts.layout')
 
 @section('content')
+<h1>Dashboard </h1>
 <div class="row">
   <div class="col-xl-6 col-sm-6">
-    <div class="grid-margin stretch-card">
-      <div class="card">
-        <a href="{{route('home')}}" style="text-decoration: none; color: #fff;">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-9">
-                <div class="d-flex align-items-center align-self-start">
-                  <h4>Dashboard </h4>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="icon icon-box-success">
-                    <span class="mdi mdi-account"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
   
     <div class="grid-margin stretch-card">
       <div class="card">
@@ -65,7 +46,30 @@
         </a>
       </div>
     </div>
+
+    <div class="grid-margin stretch-card">
+      <div class="card">
+        <a href="{{route('tableuser')}}" style="text-decoration: none; color: #fff;">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-9">
+                <div class="d-flex align-items-center align-self-start">
+                  <h4>Data User</h4>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="icon icon-box-success">
+                    <span class="mdi mdi-account"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
   </div>
+
 
   <div class="col-xl-6 col-sm-6">
     <div class="grid-margin stretch-card">

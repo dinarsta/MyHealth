@@ -70,4 +70,12 @@ class CatatanPerjalananController extends Controller
         return redirect()->route('user');
     }
 
+    public function getDataUser()
+    {
+        $dataUser = $this->user->get();
+        return view('admin.tableuser', [
+            'dataUser' => $dataUser
+        ]);
+    }
+
 }

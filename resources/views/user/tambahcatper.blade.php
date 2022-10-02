@@ -4,7 +4,11 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
+<<<<<<< HEAD
+            <h4 class="card-title">Data Catatan Perjalanan</h4>
+=======
             <h4 class="card-title">TAMBAH PERJALANAN</h4>
+>>>>>>> 890afa2d5fc7a9c01ab0913443840f51015f713a
             <form method="POST" action="{{route('catper.post')}}">
                 @csrf
 
@@ -23,7 +27,7 @@
                   <div class="col-6">
                     <div class="form-group">
                         <label>lokasi</label>
-                        <input type="text" type="email" class="form-control" name="lokasi">
+                        <input style="color: white;" type="text" type="email" class="form-control" name="lokasi">
                     </div>
                   </div>
                 </div>
@@ -32,14 +36,14 @@
                   <div class="col-6">
                     <div class="form-group">
                         <label>Waktu</label>
-                        <input type="time" class="form-control" name="waktu">
+                        <input style="color: white;" type="time" class="form-control" name="waktu">
                     </div>
                   </div>
 
                   <div class="col-6">
                     <div class="form-group">
                         <label>Suhu</label>
-                        <input type="text" class="form-control" name="suhu_tubuh">
+                        <input style="color: white;" type="text" class="form-control" name="suhu_tubuh">
                     </div>
                   </div>
                 </div>

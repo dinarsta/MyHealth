@@ -14,7 +14,7 @@
                         <div class="form-group">
                             <label>File upload</label>
                             <div class="input-group col-xs-12">
-                                <input type="file" name="foto" value="{{Auth::user()->foto}}" class="form-control">
+                                <input type="file" width="100px;" name="foto" value="{{Auth::user()->foto}}" class="form-control">
                             </div>
                         </div>
 

@@ -18,7 +18,7 @@ class CatatanPerjalananController extends Controller
 
     public function index()
     {
-        $catatanPerjalanans = $this->catatanPerjalanan->with('user')->get();
+        $catatanPerjalanans = $this-> catatanPerjalanan->where('user_id', auth()->user()->id)->with('user')->get();
         return view('user.catper', [
             'catatanPerjalanans' => $catatanPerjalanans
         ]);

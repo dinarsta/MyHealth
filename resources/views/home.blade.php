@@ -74,23 +74,31 @@
     <div class="grid-margin stretch-card">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Destinasi Pilihan</h4>
+        <h4 class="card-title">Info Covid 19</h4>
         <div class="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel" id="owl-carousel-basic">
           <div class="item">
-            <img src="{{asset('attribute/RajaAmpat.png')}}" alt="" style="height: 50vh;">
-            <h5 class="mt-2">Raja Ampat</h5>
+            <img src="{{asset('attribute/covid1 (1).jpg')}}" alt="" style="height: 50vh; margin-buttom:16rem; ">
+            <h3 class="mt-3">Vaksin Covid 19</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad similique ducimus soluta repudiandae alias natus ea nemo molestias libero ipsa expedita, dolor est voluptas enim. Illo ipsum fugiat a.</p>
+             <a href="#" class="btn btn-primary"> Info selengkapnya</a>
           </div>
           <div class="item">
-            <img src="{{asset('attribute/DEPOK.png')}}" alt="" style="height: 50vh;">
-            <h5 class="mt-2">Depok</h5>
+            <img src="{{asset('attribute/covid1 (2).jpg')}}" alt="" style="height: 50vh;">
+            <h3 class="mt-3">Pentingnya Handsanitizer</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam necessitatibus eaque quasi dolore nulla minus voluptatem non molestiae totam? Iure inventore rem sequi vitae porro accusamus animi voluptatem, ipsa explicabo?</p>
+             <a href="#" class="btn btn-primary"> Info selengkapnya</a>
           </div>
           <div class="item">
-            <img src="{{asset('attribute/JAWA.png')}}" alt="" style="height: 50vh;">
-            <h5 class="mt-2">Jawa</h5>
+            <img src="{{asset('attribute/covid1 (3).jpg')}}" alt="" style="height: 50vh;">
+            <h3 class="mt-3">Membantu Pelacakan untuk Menghentikan Penyebaran COVID-19</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia ipsa nam, autem in voluptatibus id accusantium commodi quos accusamus deleniti inventore atque doloribus maiores impedit blanditiis? Ut quidem sint itaque!</p>
+           <a href="#" class="btn btn-primary"> Info selengkapnya</a>
           </div>
           <div class="item">
-            <img src="{{asset('attribute/CANADA.png')}}" alt="" style="height: 50vh;">
-            <h5 class="mt-2">BUKAN INDONESIA</h5>
+            <img src="{{asset('attribute/antigen.jpg')}}" alt="" style="height: 50vh;">
+            <h3 class="mt-3">Pemeriksaan Kesehatan</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, doloribus earum aut excepturi saepe odit inventore accusantium, totam sed mollitia blanditiis? Modi ratione dolores est, expedita quo corrupti cupiditate cum?</p>
+          <a href="#" class="btn btn-primary"> Info selengkapnya</a>
           </div>
         </div>
       </div>
@@ -125,7 +133,13 @@
             </tbody>
           </table>
 </div> --}}
+<style>
+  .btn{
+background-color: transparent;
+border: 2px solid white;
+}
 
+</style>
   
 @endsection
 

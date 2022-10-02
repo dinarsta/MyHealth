@@ -28,8 +28,8 @@
       <!-- sidebar -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="/" style="text-decoration: none; color: #fff;"><img src="{{asset('attribute/myhealth.png')}}" alt="logo" style="height: 8vh; width: 4vw; "/>Myhealth</a>
-          <a class="sidebar-brand brand-logo-mini" href="/"><img src="{{asset('attribute/myhealth.png')}}" alt="logo" style="height: 8vh; width: 4vw; "/></a>
+          <a class="sidebar-brand brand-logo" href="/" style="text-decoration: none; color: #fff;"><img src="{{asset('attribute/myhealth.png')}}" alt="logo" style="height: 5rem; width: 5rem; "/>Myhealth</a>
+          <a class="sidebar-brand brand-logo-mini" href="/"><img src="{{asset('attribute/myhealth.png')}}" alt="logo" style="height: 3rem; width: 5rem; "/></a>
         </div>
         <ul class="nav">
           <li class="nav-item profile">

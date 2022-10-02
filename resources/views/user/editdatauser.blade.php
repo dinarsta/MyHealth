@@ -11,11 +11,10 @@
                 <div class="row">
                     <div class="col-4">
 
-                        <div class="form-group">
-                            <label>File upload</label>
-                            <div class="input-group col-xs-12">
-                                <input type="file" name="foto" value="{{Auth::user()->foto}}" class="form-control">
-                            </div>
+                      <div class="form-group">
+                            <img src="foto/{{Auth::user()->foto}}" alt="FOTO BELUM TERSEDIA" style="height: 7rem; border-radius: 100%" class="mb-1 mx-auto d-block">
+                            <label></label>
+                            <input type="file" name="foto" class="form-control">
                         </div>
 
                         <div class="form-group">
@@ -34,12 +33,6 @@
                           </div>
                         </div>
 
-                        <div class="col-6">
-                          <div class="form-group">
-                              <label for="exampleInputPassword4">Password</label><br>
-                              <a href="{{route('password.request')}}" class="btn btn-primary">change password</a>
-                          </div>
-                        </div>
                       </div>
 
                       <div class="row">

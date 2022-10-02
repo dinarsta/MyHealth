@@ -62,7 +62,7 @@ class CatatanPerjalananController extends Controller
             }
             $file = $request->file('foto');
             $extension = $file->getClientOriginalName();
-            $filename = time().'.'.$extension;
+            $filename = $extension;
             $file->move('foto/', $filename);
             $data->foto = $filename;
         }
